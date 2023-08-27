@@ -9,6 +9,50 @@
     <title>Sign-up Form</title>
 </head>
 <body>
-    <h1>Placeholder</h1>
+    <div class="container flex-container">
+        <div class="background-image">
+            <div class="overlay">
+
+            </div>
+            <p>Photo by <a href="https://unsplash.com/@juliusdrost?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Julius Drost</a> on <a href="https://unsplash.com/photos/C8wlYF8ubBo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </p>
+        </div>
+        <div class="content">
+            <div class="description">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to get started.</p>
+                <p>You know you want to.</p>
+            </div>
+            <div class="form">
+                <h1>Sign up now!</h1>
+                <form action="#">
+                    <fieldset>
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" id="first-name" name="first-name">
+
+                        <label for="last-name">LAST NAME</label>
+                        <input type="text" id="last-name" name="last-name">
+                    </fieldset>
+                    
+                    <fieldset>
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email">
+
+                        <label for="phone-number">PHONE NUMBER</label>
+                        <input type="tel" id="phone-number" name="phone-number">
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password">
+
+                        <label for="confirm-password">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm-password" name="confirm-password" disabled>
+                    </fieldset>
+                </form>
+            </div>
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+    </div>
 </body>
 </html>
