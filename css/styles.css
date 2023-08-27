@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: wonderworld;
+    src: url(../fonts/WonderworldPersonalUseRegular-gxdo3.otf);
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    font-family: wonderworld;
+}
+
+.flex-container {
+    display: flex;
+    height: 100vh;
+}
+
+.background-image {
+    background-image: url(../images/burning-cards.jpg);
+    background-size: contain;
+    color: white;
+    width: 40%;
+}
