@@ -19,39 +19,59 @@
         </div>
         <div class="content">
             <div class="description">
-                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to get started.</p>
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>Sign up <i>now</i> to get started.</p>
                 <p>You know you want to.</p>
             </div>
             <div class="form">
                 <h1>Sign up now!</h1>
                 <form action="#">
-                    <fieldset>
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" name="first-name">
+                    <fieldset class="flex-container">
+                        <div>
+                            <label for="first-name">FIRST NAME</label>
+                            <br>
+                            <input type="text" id="first-name" name="first-name">
+                        </div>
 
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" name="last-name">
+                        <div>
+                            <label for="last-name">LAST NAME</label>
+                            <br>
+                            <input type="text" id="last-name" name="last-name">
+                        </div>
                     </fieldset>
                     
-                    <fieldset>
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email">
+                    <fieldset class="flex-container">
+                        <div>
+                            <label for="email">EMAIL</label>
+                            <br>
+                            <input type="email" id="email" name="email">
+                        </div>
 
-                        <label for="phone-number">PHONE NUMBER</label>
-                        <input type="tel" id="phone-number" name="phone-number">
+                        <div>
+                            <label for="phone-number">PHONE NUMBER</label>
+                            <br>
+                            <input type="tel" id="phone-number" name="phone-number">
+                        </div>
                     </fieldset>
 
-                    <fieldset>
-                        <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password">
+                    <fieldset class="flex-container">
+                        <div>
+                            <label for="password">PASSWORD</label>
+                            <br>
+                            <input type="password" id="password" name="password">
+                        </div>
 
-                        <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm-password" name="confirm-password" disabled>
+                        <div>
+                            <label for="confirm-password">CONFIRM PASSWORD</label>
+                            <br>
+                            <input type="password" id="confirm-password" name="confirm-password">
+                        </div>
                     </fieldset>
                 </form>
             </div>
-            <button type="submit">Create Account</button>
-            <p>Already have an account? <a href="#">Log in</a></p>
+            <div class="submit">
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <a href="#">Log in</a></p>
+            </div>
         </div>
     </div>
 </body>
