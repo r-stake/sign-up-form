@@ -29,7 +29,7 @@ a {
 .background-image {
     position: relative;
     background: url(../images/burning-cards.jpg) center center;
-    min-width: 40%;
+    width: 40%;
     min-height: 100vh; /* What finally fixed the image height across different size screens */
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,6 +40,8 @@ a {
     margin-top: 20%;
     background-color: black;
     opacity: 0.5;
+    text-align: center;
+    /* font-size: 4rem; */
 }
 
 .background-image .overlay img {
@@ -91,7 +93,8 @@ a {
 }
 
 .container .content .form fieldset input {
-    width: 250px;
+    width: calc(100% - 50px);
+    min-width: 100px;
     margin-right: 80px;
     border-radius: 5px;
     border: 1px solid #cccccc;
@@ -125,4 +128,36 @@ a {
 .container .content p a {
     color: #f27d0c;
     text-decoration: none;
+}
+
+@media all and (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .background-image {
+        width: 100%;
+    }
+
+    .container .content .description p {
+        margin-left: 0.75rem;
+    }
+
+    .container .content .form h1 {
+        margin-left: 0;
+        padding-left: 0.75rem;
+    }
+
+    .container .content .form fieldset div:first-child {
+        margin-left: 0;
+    }
+
+    .container .content .form fieldset input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .container .content .submit {
+        margin-left: 0.75rem;
+    }
 }
