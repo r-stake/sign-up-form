@@ -83,6 +83,10 @@ a {
     border: none;
 }
 
+.container .content .form fieldset div {
+    margin-top: 10px;
+}
+
 .container .content .form fieldset div:first-child {
     margin-left: 3rem;
 }
@@ -93,6 +97,7 @@ a {
 }
 
 .container .content .form fieldset input {
+    font-family: roboto;
     width: calc(100% - 50px);
     min-width: 100px;
     margin-right: 80px;
@@ -101,9 +106,46 @@ a {
     padding: 5px;
 }
 
-.container .content .form fieldset div {
-    margin-top: 10px;
+.container .content .form fieldset input:focus {
+    background-color: #f5f5f5;
+    box-shadow: 3px 3px 5px #e5e5e5;
+    outline-color: #f27d0c;
 }
+
+.container .content .form fieldset input:valid {
+    border-color: green;
+}
+
+/* .container .content .form fieldset input:invalid {
+    border-color: red;
+} */
+
+.container .content .form fieldset .email {
+    position: relative;
+}
+
+.container .content .form fieldset .email label:after {
+    content: "Format: email@email.com";
+    font-family: roboto;
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+.container .content .form fieldset .phone {
+    position: relative;
+}
+
+.container .content .form fieldset .phone label:after {
+    content: "+123 456 78910";
+    font-family: roboto;
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
 
 .container .content .submit {
     margin-left: 3rem;
