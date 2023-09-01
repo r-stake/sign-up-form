@@ -125,7 +125,7 @@ a {
 }
 
 .container .content .form fieldset .email label:after {
-    content: "Format: email@email.com";
+    content: "Example: email@email.com";
     font-family: roboto;
     font-size: 0.75rem;
     position: absolute;
@@ -134,7 +134,7 @@ a {
 }
 
 .container .content .form fieldset .phone label:after {
-    content: "+123 456 78910";
+    content: "Example: +123 456 78910";
     font-family: roboto;
     font-size: 0.75rem;
     position: absolute;
