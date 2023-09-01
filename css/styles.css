@@ -61,6 +61,7 @@ a {
     font-size: 1.60rem;
     margin-top: 2rem;
     margin-left: 3rem;
+    padding-right: 40%;
 }
 
 .container .description p:last-child {
@@ -69,6 +70,7 @@ a {
 
 .container .content .form {
     background-color: white;
+    width: 100%;
 }
 
 .container .content .form h1 {
@@ -81,14 +83,15 @@ a {
 .container .content .form fieldset {
     margin: 0;
     border: none;
-}
-
-.container .content .form fieldset {
     margin-top: 0.625rem;
 }
 
 .container .content .form fieldset:last-of-type {
     margin-top: 1.4375rem;
+}
+
+.container .content .form fieldset div {
+    width: 35%;
 }
 
 .container .content .form fieldset div:first-child {

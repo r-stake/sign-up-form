@@ -71,6 +71,7 @@ password.addEventListener("input", () => {
 password2.addEventListener("input", () => {
     if (submitted) {
         validateForMissingValue(password2, password2Error, passwordLabel);
+        validatePasswordMatch(password, password2, passwordError, password2Error, passwordLabel);
     }
 });
 
@@ -92,14 +93,16 @@ function capitalize(str) {
     return str.charAt(1) + str.slice(2).toLowerCase();
 }
 
-function validatePasswordMatch(element, element2, elementError, elementError2, elementLabel, event) {
+function validatePasswordMatch(element, element2, elementError, elementError2, elementLabel, event = null) {
     if (element.value && element2.value) {
         const formattedElementName = capitalize(elementLabel.textContent);
     if (element.value !== element2.value) {
         elementError2.innerHTML = `<i class="bi bi-patch-exclamation"></i> ${formattedElementName} does not match`;
         element.classList.add("active-error");
         element2.classList.add("active-error");
-        event.preventDefault();
+        if (event) {
+            event.preventDefault();
+        }
     } else {
         elementError.textContent = "";
         elementError2.textContent = "";
