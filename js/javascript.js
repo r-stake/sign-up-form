@@ -35,6 +35,7 @@ form.addEventListener("submit", (event) => {
     validateForMissingValue(phone, phoneError, phoneLabel, event);
     validateForMissingValue(password, passwordError, passwordLabel, event);
     validateForMissingValue(password2, password2Error, passwordLabel, event);
+    validatePasswordMatch(password, password2, passwordError, password2Error, passwordLabel, event);
 });
 
 firstName.addEventListener("input", () => {
@@ -89,4 +90,21 @@ function validateForMissingValue(element, elementError, elementLabel, event = nu
 
 function capitalize(str) {
     return str.charAt(1) + str.slice(2).toLowerCase();
+}
+
+function validatePasswordMatch(element, element2, elementError, elementError2, elementLabel, event) {
+    if (element.value && element2.value) {
+        const formattedElementName = capitalize(elementLabel.textContent);
+    if (element.value !== element2.value) {
+        elementError2.innerHTML = `<i class="bi bi-patch-exclamation"></i> ${formattedElementName} does not match`;
+        element.classList.add("active-error");
+        element2.classList.add("active-error");
+        event.preventDefault();
+    } else {
+        elementError.textContent = "";
+        elementError2.textContent = "";
+        element.classList.remove("active-error");
+        element2.classList.remove("active-error");
+        }
+    }
 }
