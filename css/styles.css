@@ -29,7 +29,7 @@ a {
 .background-image {
     position: relative;
     background: url(../images/burning-cards.jpg) center center;
-    width: 40%;
+    min-width: 40%;
     min-height: 100vh; /* What finally fixed the image height across different size screens */
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,7 +41,7 @@ a {
     background-color: black;
     opacity: 0.5;
     text-align: center;
-    /* font-size: 4rem; */
+    font-size: 4rem;
 }
 
 .background-image .overlay img {
@@ -61,7 +61,7 @@ a {
     font-size: 1.60rem;
     margin-top: 2rem;
     margin-left: 3rem;
-    padding-right: 40%;
+    margin-right: 3rem;
 }
 
 .container .description p:last-child {
@@ -86,12 +86,8 @@ a {
     margin-top: 0.625rem;
 }
 
-.container .content .form fieldset:last-of-type {
-    margin-top: 1.4375rem;
-}
-
 .container .content .form fieldset div {
-    width: 35%;
+    width: 50%;
 }
 
 .container .content .form fieldset div:first-child {
@@ -99,24 +95,24 @@ a {
 }
 
 .container .content .form fieldset:last-child {
+    margin-top: 1.5rem;
     box-shadow: 0 10px 5px -5px #ddd;
     padding-bottom: 2rem;
 }
 
 .container .content .form fieldset input {
     font-family: roboto;
-    width: calc(100% - 50px);
+    width: calc(100% - 20px);
     min-width: 100px;
-    margin-right: 80px;
     border-radius: 5px;
     border: 1px solid #cccccc;
-    padding: 5px;
+    padding: 10px;
 }
 
 .container .content .form fieldset input:focus {
     background-color: #f5f5f5;
     box-shadow: 3px 3px 5px #e5e5e5;
-    outline-color: #f27d0c;
+    outline-color: blue;
 }
 
 .container .content .form fieldset input:valid {
@@ -175,7 +171,13 @@ a {
     font-size: 85%;
     position: absolute;
     bottom: -20px;
+    left: 0;
     color: red;
+}
+
+.email .error-message,
+.phone .error-message {
+    bottom: -35px;
 }
 
 .active-error {
@@ -200,6 +202,17 @@ a {
         padding-left: 0.75rem;
     }
 
+    .container .content .form fieldset {
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .container .content .form fieldset div {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
     .container .content .form fieldset div:first-child {
         margin-left: 0;
     }
@@ -207,6 +220,18 @@ a {
     .container .content .form fieldset input {
         width: 100%;
         margin-right: 0;
+    }
+
+    .container .content .form fieldset .phone {
+        margin-top: 2rem;
+    }
+
+    .container .content .form fieldset .password1 {
+        margin-top: 2rem;
+    }
+
+    .container .content .form fieldset:last-of-type {
+        margin-top: 0;
     }
 
     .container .content .submit {
